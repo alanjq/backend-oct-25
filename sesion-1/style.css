@@ -1,0 +1,8 @@
+/* Estructura CSS */
+header div {
+    background-color: antiquewhite;
+}
+footer, header, nav {
+    padding: 1em;
+    background-color: gray;
+}
