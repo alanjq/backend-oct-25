@@ -1,0 +1,39 @@
+-- Crear una tabla
+create table persona (
+	id smallint unsigned NOT NULL AUTO_INCREMENT,
+    nombre varchar(20) NOT NULL,
+    apellido varchar(40) NOT NULL,
+    ultimo_cambio timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	PRIMARY KEY (id)
+)
+
+-- Ingrear un registro
+INSERT INTO `sesion3`.`persona` (`nombre`, `apellido`) VALUES ('Lorena', 'Rebollar');
+UPDATE `sesion3`.`persona` SET `apellido` = 'H' WHERE (`id` = '2');
+
+-- Agregar una columna nueva a la tabla
+ALTER TABLE `sesion3`.`persona` 
+ADD COLUMN `quien_modifico` VARCHAR(45) NULL DEFAULT 'Sin especificar' AFTER `ultimo_cambio`;
+
+-- Modificar un registro especificando el ID
+UPDATE persona SET quien_modifico = 'Alan Jimenez' WHERE id = 2
+
+-- Lista de empleados con departamento
+SELECT e.emp_no, concat(first_name,' ', last_name) as employee, dep.dept_name
+FROM employees.employees e
+INNER JOIN employees.dept_emp d
+	ON d.emp_no = e.emp_no
+INNER JOIN employees.departments dep
+	ON dep.dept_no = d.dept_no
+-- SELECT emp_no, dept_no FROM employees.dept_emp
+-- SELECT dept_name FROM employees.departments
+
+-- Listar empleoados según el ID de departamento seleccionado
+SELECT dep.dept_no,  e.emp_no, concat(first_name,' ', last_name) as employee, dep.dept_name
+FROM employees.employees e
+INNER JOIN employees.dept_emp d
+	ON d.emp_no = e.emp_no
+INNER JOIN employees.departments dep
+	ON dep.dept_no = d.dept_no
+WHERE dep.dept_no = 'd008' -- se cambia según el select
+LIMIT 15
