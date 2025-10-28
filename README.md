@@ -9,3 +9,5 @@
 [Sesión 1 - PHP](https://youtu.be/4TNBNUgU-AQ)
 
 [Sesión 2 - PHP](https://youtu.be/gcGmLgUQRWo)
+
+[Sesión 3 - PHP + MySQL](https://youtu.be/9hpRF83w_e8)
