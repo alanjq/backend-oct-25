@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cargarInfo()">Cargar información</button>
+    <section id="informacion"></section>
+
+    <script>
+        function createCityItem(id, nombre, pais, distrito, poblacion){
+            return `<div id="${id}">
+                    <b>${nombre}, ${distrito}</b><br/>
+                    <div>País: <b>${pais}</b>. Población: <b>${poblacion} hab.</b></div>
+                </div>`
+        }
+
+        function cargarInfo(){
+            fetch('http://localhost:3000')
+            .then(r=>r.json())
+            .then(response=>{
+                let html = response.map((r)=>createCityItem(r.ID, r.Name, r.CountryCode, r.District, r.Population))
+                document.getElementById('informacion').innerHTML = html
+            })
+        }
+    </script>
+</body>
+</html>
