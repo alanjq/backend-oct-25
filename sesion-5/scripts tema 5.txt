@@ -1,0 +1,100 @@
+node -v
+npm -v
+
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+node servidor.js
+
+let mysql = require('mysql');
+let config = require('./config.js');
+
+let connection = mysql.createConnection(config);
+
+let sql = `SELECT book_name* FROM libros WHERE Clasificacion=Programacion`;
+connection.query(sql, (error, results, fields) => {
+  if (error) {
+    return console.error(error.message);
+  }
+  console.log(results);
+});
+
+connection.end(); 
+
+npm init
+
+npm install mysql
+
+CREATE DATABASE "Nombrebasededatos"
+
+let mysql = require('mysql');
+
+let connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'Nombredelabasededatos'
+});
+
+
+$ mkdir myapp
+$ cd myapp
+
+$ npm init
+
+$ npm install express
+
+npm install mongoose
+
+const mongoose = require("mongoose");
+
+
+const mongoose = require("mongoose");
+
+const Schema = mongoose.Schema;
+
+
+let book = new Schema({
+  name: {
+    type: String
+  },
+  price: {
+    type: Number
+  },
+  inStock: {
+    type: Boolean
+  }
+});
+
+app.get(
+    '/',
+    (request, response) => {
+        response.send('pagina Principal')
+    }
+);
+
+app.post('/', function (req, res) {
+    var user_name = req.body.user;
+    var password = req.body.password;
+    console.log("User name = " + user_name + ", password is " + password);
+    res.end("yes");
+});
+
+app.listen(
+    3000,
+    () => {
+        console.log('Servidor corriendo')
+    }
+)
