@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ejemplo1": {
+      "commandName": "Project",
+      "commandLineArgs": "dia=5 mes=11 año=2025"
+    }
+  }
+}

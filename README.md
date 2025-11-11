@@ -15,3 +15,5 @@
 [Sesión 4 - JAVA](https://youtu.be/cHGLeP5muLM)
 
 [Sesión 5 - Node.js](https://youtu.be/dMzSLEQE_F0)
+
+[Sesión 6 C#](https://youtu.be/Www-l3quHso)
