@@ -17,3 +17,5 @@
 [Sesión 5 - Node.js](https://youtu.be/dMzSLEQE_F0)
 
 [Sesión 6 C#](https://youtu.be/Www-l3quHso)
+
+[Sesión 7 Python](https://youtu.be/iwd2Fv30_AI)
