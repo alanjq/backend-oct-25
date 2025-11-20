@@ -19,3 +19,5 @@
 [Sesión 6 C#](https://youtu.be/Www-l3quHso)
 
 [Sesión 7 Python](https://youtu.be/iwd2Fv30_AI)
+
+[Sesión 8 Presentación proyectos | Consumir servicios de APIs](https://youtu.be/ykE-qnXD3DE)
